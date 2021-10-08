@@ -1,0 +1,16 @@
+from random import randint
+k = int(input("Введите желаемое количество попыток: "))
+n = int(input("Введите максимальное значение случайного числа: "))
+r = randint(1, n)
+while k > 0:
+    m = int(input("Угадайте число: "))
+    if m == r:
+        print("Вы выиграли")
+        break
+    elif m < r:
+        print(">")
+    elif m > r:
+        print("<")
+    k = k - 1
+if k == 0:
+    print("Вы проиграли(")
